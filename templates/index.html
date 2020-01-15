@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Detection</title>
+    <style>
+        body {
+            height: 100vh; 
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%
+        }
+
+        form{
+            padding: 3rem;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            border-radius: 5px;;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h3>Object detection Application</h3>
+    <form  method="POST" enctype="multipart/form-data">
+    <label for="image">Upload an image</label>
+    <input type="file" id="image" name="image" >
+    <button>Upload Image</button>
+    </div>
+    </form>
+</body>
+</html>
