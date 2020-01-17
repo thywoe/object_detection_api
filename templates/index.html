@@ -18,6 +18,10 @@
             height: 100%
         }
 
+        h3{
+            color: #F3752B;
+        }
+
         form{
             padding: 3rem;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -27,8 +31,17 @@
     </style>
 </head>
 <body>
+    {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
     <div class="container">
-    <h3>Object detection Application</h3>
+    <h3>Object Detection Application</h3>
     <form  method="POST" enctype="multipart/form-data">
     <label for="image">Upload an image</label>
     <input type="file" id="image" name="image" >
